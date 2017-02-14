@@ -8,6 +8,21 @@ import { UserDetailPage } from '../user-detail/user-detail';
 })
 export class UsersPage {
 
+  users = [
+    {
+      name: 'Kattya',
+      bio: 'Ruby developer'
+    },
+    {
+      name: 'Nicolas',
+      bio: 'Web developer'
+    },
+    {
+      name: 'John',
+      bio: 'python developer'
+    }
+  ]
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
@@ -16,6 +31,10 @@ export class UsersPage {
 
   goToUserDetailPage(){
     this.navCtrl.push( UserDetailPage );
+  }
+
+  clickedUser( user ){
+    console.log(user);
   }
 
 }

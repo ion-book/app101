@@ -9,6 +9,11 @@ import { UsersPage } from '../users/users';
 })
 export class HomePage {
 
+  user = {
+    name: 'Nicolas',
+    bio: 'Desarrollador apps'
+  }
+
   constructor(public navCtrl: NavController) {
     
   }
