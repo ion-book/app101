@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { UserDetailPage } from '../user-detail/user-detail';
+import { UsersService } from '../../providers/users-service';
 
 @Component({
   selector: 'page-users',
@@ -8,24 +9,19 @@ import { UserDetailPage } from '../user-detail/user-detail';
 })
 export class UsersPage {
 
-  users = [
-    {
-      name: 'Kattya',
-      bio: 'Ruby developer'
-    },
-    {
-      name: 'Ivan',
-      bio: 'Python developer'
-    },
-    {
-      name: 'John',
-      bio: 'Php developer'
-    }
-  ]
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  users = []
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public userService: UsersService
+  ) {}
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad UsersPage');
+    this.userService.getUsers()
+    .subscribe(data => {
+      this.users = data;
+    })
   }
 
   goToUserDetailPage(){

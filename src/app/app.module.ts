@@ -9,6 +9,8 @@ import { MyUserComponent } from '../components/my-user/my-user';
 import { MyHighlightDirective } from '../components/my-highlight/my-highlight';
 import { ReversePipe } from '../pipes/reverse';
 
+import { UsersService } from '../providers/users-service';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +32,9 @@ import { ReversePipe } from '../pipes/reverse';
     UsersPage,
     UserDetailPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    UsersService
+  ]
 })
 export class AppModule {}
