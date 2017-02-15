@@ -22,4 +22,13 @@ export class HomePage {
     this.navCtrl.push( UsersPage );
   }
 
+  clickedContact(user){
+    console.log(user);
+  }
+
+
+  clickedCall(user){
+    console.log(user);
+  }
+
 }

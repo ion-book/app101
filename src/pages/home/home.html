@@ -11,6 +11,6 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
-  <my-user [user]="user"></my-user>
+  <my-user [user]="user" (onContact)="clickedContact( $event )" (onCall)="clickedCall( $event )"></my-user>
   <button ion-button (click)="goToUsersPage()">Pagina usuarios</button>
 </ion-content>

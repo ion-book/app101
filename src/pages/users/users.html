@@ -6,6 +6,6 @@
 
 <ion-content padding>
   <h1>Pagina de usuarios</h1>
-  <my-user (onSave)="clickedUser( $event )" [user]="user" *ngFor="let user of users"></my-user>
+  <my-user [user]="user" (onContact)="clickedContact( $event )" (onCall)="clickedCall( $event )" *ngFor="let user of users"></my-user>
   <button ion-button (click)="goToUserDetailPage()">detalle</button>
 </ion-content>

@@ -14,15 +14,14 @@ export class UsersPage {
       bio: 'Ruby developer'
     },
     {
-      name: 'Nicolas',
-      bio: 'Web developer'
+      name: 'Ivan',
+      bio: 'Python developer'
     },
     {
       name: 'John',
-      bio: 'python developer'
+      bio: 'Php developer'
     }
   ]
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
@@ -33,7 +32,12 @@ export class UsersPage {
     this.navCtrl.push( UserDetailPage );
   }
 
-  clickedUser( user ){
+  clickedContact(user){
+    console.log(user);
+  }
+
+
+  clickedCall(user){
     console.log(user);
   }
 

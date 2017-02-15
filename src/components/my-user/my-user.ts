@@ -7,13 +7,21 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class MyUserComponent {
 
   @Input() user;
-  @Output() onSave = new EventEmitter();
+  @Output() onContact = new EventEmitter();
+  @Output() onCall = new EventEmitter();
 
-  constructor() {}
+  constructor() {
+  }
 
-  save(){
-    console.log('save', this.user.name);
-    this.onSave.emit( this.user );
+  contact(){
+    //funcionalidad
+    console.log(this.user.name, 'contact');
+    this.onContact.emit( this.user );
+  }
+
+  call(){
+    console.log(this.user.name, 'call');
+    this.onCall.emit( this.user );
   }
 
 }
