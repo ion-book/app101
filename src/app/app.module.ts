@@ -7,6 +7,8 @@ import { UserDetailPage } from '../pages/user-detail/user-detail';
 
 import { MyUserComponent } from '../components/my-user/my-user';
 import { MyHighlightDirective } from '../components/my-highlight/my-highlight';
+import { ReversePipe } from '../pipes/reverse';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { MyHighlightDirective } from '../components/my-highlight/my-highlight';
     UsersPage,
     UserDetailPage,
     MyUserComponent,
-    MyHighlightDirective
+    MyHighlightDirective,
+    ReversePipe
   ],
   imports: [
     IonicModule.forRoot(MyApp)
