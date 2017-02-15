@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content padding>
-  <h1>Pagina de usuarios</h1>
+  <h1 my-highlight>Pagina de usuarios</h1>
   <my-user [user]="user" (onContact)="clickedContact( $event )" (onCall)="clickedCall( $event )" *ngFor="let user of users"></my-user>
   <button ion-button (click)="goToUserDetailPage()">detalle</button>
 </ion-content>

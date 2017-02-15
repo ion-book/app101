@@ -6,6 +6,7 @@ import { UsersPage } from '../pages/users/users';
 import { UserDetailPage } from '../pages/user-detail/user-detail';
 
 import { MyUserComponent } from '../components/my-user/my-user';
+import { MyHighlightDirective } from '../components/my-highlight/my-highlight';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { MyUserComponent } from '../components/my-user/my-user';
     HomePage,
     UsersPage,
     UserDetailPage,
-    MyUserComponent
+    MyUserComponent,
+    MyHighlightDirective
   ],
   imports: [
     IonicModule.forRoot(MyApp)
