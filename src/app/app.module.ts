@@ -17,7 +17,6 @@ import { ReversePipe } from '../pipes/reverse';
 
 import { UsersService } from '../providers/users-service';
 
-
 @NgModule({
   declarations: [
     MyApp,
