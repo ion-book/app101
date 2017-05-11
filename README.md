@@ -15,6 +15,7 @@ npm install
 
 Y luego
 
+```
 ionic cordova prepare
 ```
 
